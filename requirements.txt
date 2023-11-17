@@ -5,6 +5,7 @@ numpy
 pandas
 python-dateutil
 pytz
+gunicorn
 scikit-learn
 scipy
 six
