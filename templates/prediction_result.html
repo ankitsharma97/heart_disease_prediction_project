@@ -1,0 +1,17 @@
+<!-- prediction_app/templates/prediction_result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Prediction Result</h2>
+        <p>The predicted result is: {% if result %}Positive{% else %}Negative{% endif %}</p>
+        <a href="{% url 'predict_heart_disease' %}" class="btn btn-primary">Back to Prediction</a>
+    </div>
+</body>
+</html>

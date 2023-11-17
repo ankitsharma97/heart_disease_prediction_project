@@ -1,0 +1,18 @@
+<!-- prediction_app/templates/predict_heart_disease.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Predict Heart Disease</h2>
+        <form method="post" action="{% url 'predict_heart_disease' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <p>Go back to the <a href="{% url 'index' %}">index page</a>.</p>
+    </div>
+</body>
+</html>
