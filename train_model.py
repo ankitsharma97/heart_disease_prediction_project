@@ -1,4 +1,3 @@
-# train_model.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -17,6 +16,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Train a Random Forest Classifier
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
+
+# Evaluate the model on the test set (accuracy in this case)
+accuracy = model.score(X_test, y_test)
+print(f"Accuracy on the test set: {accuracy:.2%}")
 
 # Save the model
 joblib.dump(model, 'heart_disease_model.joblib')

@@ -16,6 +16,8 @@ class UserInput(models.Model):
     ca = models.IntegerField()
     thal = models.IntegerField()
 
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
 
 class Prediction(models.Model):
     user_input = models.ForeignKey(UserInput, on_delete=models.CASCADE)
